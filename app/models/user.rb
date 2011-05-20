@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-  include DciManager
+  include Roles
 end

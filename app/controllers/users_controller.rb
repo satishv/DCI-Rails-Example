@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def index
-    roles = Array('admin')
-    u = User.new roles
-    render :text => u.special_method(:work)
+    ctx = Contexts::Admin.new
+    render :text => ctx.perform_admin_action(:work)
   end
 end
